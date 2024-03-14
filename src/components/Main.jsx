@@ -8,5 +8,6 @@ export default function Main(){
         <Input/>
         <Button/>
     </>
+    //Could try to find the most paid by committees.
     )
 }
