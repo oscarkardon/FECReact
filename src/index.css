@@ -9,3 +9,11 @@
 .button{
     background-color: #F9E6FF;
 }
+.inline-heading {
+    display: inline;
+    justify-content: space-evenly;
+}
+.item {
+    display: flex;
+    justify-content: space-between;
+}

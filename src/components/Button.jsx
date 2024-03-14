@@ -1,6 +1,7 @@
 import React from "react";
 import makeAPILK from "../services/services";
 import Item from "./Item";
+import ColumnHeader from "./ColumnHeader";
 
 export default function Button() {
   const [dataArray, setDataArray] = React.useState([]);
@@ -31,7 +32,7 @@ export default function Button() {
       >
         See Leonard Kardon's FEC contributions
       </button>
-
+      <ColumnHeader/>
       {dataElements}
     </div>
   );

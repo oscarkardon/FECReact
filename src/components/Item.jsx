@@ -4,7 +4,9 @@ export default function Item({details}) {
     console.log(details)
     return(
         <div className="item">
-            <p>{details.contribution_receipt_amount} {details.contributor_name} {details.memo_text}</p>
+            <p>{details.contribution_receipt_amount} </p>
+            <p>{details.contributor_name}</p> 
+            <p>{details.memo_text}</p>
         </div>
     )
 }
