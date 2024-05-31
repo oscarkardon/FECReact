@@ -1,7 +1,7 @@
 import React from "react";
-import makeAPICall from "../../services/services";
-import Item from "../Data/Item";
-import ColumnHeader from "../Data/ColumnHeader";
+import makeAPICall from "./services/services";
+import Item from "./components/Data/Item";
+import ColumnHeader from "./components/Data/ColumnHeader";
 
 export default function Button() {
   const [dataArray, setDataArray] = React.useState([]);
@@ -31,21 +31,23 @@ export default function Button() {
 
   return (
     <div>
-      <fieldset>
+      <fieldset className='form'>
+        <label>Enter the Name of the Person You Want to Search</label>
         <input 
               type="text"
-              placeholder="Enter the Name of the Person You Want to Search"
+              placeholder="Full Name"
               onChange={handleChange}
               name="name"
               value={formData.name}
           />
-          <input 
-              type="text"
-              placeholder="Enter the City of the Person You Want to Search"
-              onChange={handleChange}
-              name="city"
-              value={formData.city}
-          />
+        <label>Enter the City of the Person You Want to Search</label>
+        <input 
+            type="text"
+            placeholder="City"
+            onChange={handleChange}
+            name="city"
+            value={formData.city}
+        />
         <button
           className="button"
           onClick={handleClick}
@@ -53,8 +55,10 @@ export default function Button() {
           See FEC contributions
         </button>
       </fieldset>
-      <ColumnHeader/>
-      {dataElements}
+      <div className="data">
+        <ColumnHeader/>
+        {dataElements}
+      </div>
     </div>
   );
 }

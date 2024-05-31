@@ -13,7 +13,96 @@
     display: inline;
     justify-content: space-evenly;
 }
-.item {
+
+.data {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+    gap: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .column-header, .item {
+    display: contents;
+  }
+  
+  .column-header span, .item span {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  .column-header {
+    font-weight: bold;
+    background-color: #f0f0f0;
+    color: white;
+  }
+  
+  fieldset {
+    margin-bottom: 20px;
+  }
+  
+  button {
+    margin-top: 10px;
+  }
+  
+.form {
     display: flex;
-    justify-content: space-between;
-}
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #dd63ff;
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  
+  .form label {
+    align-self: center; 
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white; 
+    background-color: #dd63ff;
+
+  }
+  
+  .form input[type="text"] {
+    width: calc(100% - 20px); 
+    padding: 10px;
+    margin-bottom: 20px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: white;
+  }
+  
+  /* Style for the placeholder text */
+  .form input[type="text"]::placeholder {
+    color: #888;
+  }
+
+  .button {
+    width: 90%; /* Full width */
+    padding: 10px;
+    background-color: #C300FF;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #b610e8;
+  }
+
+  .form input[type="text"]:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #b610e8;
+  }
+  .form input[type="text"]::placeholder {
+    color: white;
+  }

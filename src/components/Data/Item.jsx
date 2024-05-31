@@ -4,9 +4,9 @@ export default function Item({details}) {
     console.log(details)
     return(
         <div className="item">
-            <p>{details.contribution_receipt_amount} </p>
-            <p>{details.contributor_name}</p> 
-            <p>{details.memo_text}</p>
+            <span>{details.contributor_name}</span> 
+            <span>{details.contribution_receipt_amount} </span>
+            <span>{details.memo_text}</span>
         </div>
     )
 }
