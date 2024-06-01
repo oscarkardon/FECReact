@@ -16,9 +16,11 @@
 
 .data {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+    grid-template-columns: repeat(4, 1fr); /* Adjust the number of columns as needed */
     gap: 10px;
     border-bottom: 1px solid #ccc;
+    color: white;
+
   }
   
   .column-header, .item {
@@ -49,7 +51,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid black;
+    border: 1px solid white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);

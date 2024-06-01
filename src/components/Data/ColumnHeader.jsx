@@ -6,6 +6,7 @@ export default function ColumnHeader(){
             <span>Name</span>
             <span>Amount</span>
             <span>Memo</span>
+            <span>Date</span>
         </div>
     )
 }

@@ -7,6 +7,7 @@ export default function Item({details}) {
             <span>{details.contributor_name}</span> 
             <span>{details.contribution_receipt_amount} </span>
             <span>{details.memo_text}</span>
+            <span>{details.contribution_receipt_date}</span>
         </div>
     )
 }
