@@ -1,11 +1,49 @@
 * {
-    background-color: #C300FF;
+  background-color: #C300FF;
 }
-.header{
-    color: #F9E6FF;
-    text-align: center;
-    font-size: 1.75rem;
+
+.header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+  background-color: #C300FF;
+  color: #F9E6FF;
+  font-size: 1.75rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Ensure padding is included in the width calculation */
 }
+
+.header-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 5vw;
+  margin: 0
+}
+
+.header-nav {
+  display: flex;
+  gap: 15px;
+}
+
+.header-button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.header-button:hover {
+  text-decoration: underline;
+}
+
+
 .button{
     background-color: #F9E6FF;
 }

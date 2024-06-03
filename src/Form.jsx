@@ -3,7 +3,7 @@ import makeAPICall from "./services/services";
 import Item from "./components/Data/Item";
 import ColumnHeader from "./components/Data/ColumnHeader";
 
-export default function Button() {
+export default function Form() {
   const [dataArray, setDataArray] = React.useState([]);
   const [formData, setFormData] = React.useState({name: "", city: ""})
 
