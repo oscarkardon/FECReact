@@ -5,7 +5,7 @@ import ColumnHeader from "./components/Data/ColumnHeader";
 
 export default function Form() {
   const [dataArray, setDataArray] = React.useState([]);
-  const [formData, setFormData] = React.useState({name: "", city: ""})
+  const [formData, setFormData] = React.useState({name: "", city: ""});
 
   async function handleClick() {
     try {
@@ -24,6 +24,13 @@ export default function Form() {
     }));
   }
 
+  function handleKeyDown(event) {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      handleClick();
+    }
+  }
+
   const dataElements = dataArray.map(data => 
     <Item key={data.sub_id} details={data} />
   );
@@ -33,19 +40,21 @@ export default function Form() {
       <fieldset className='form'>
         <label>Enter the Name of the Person You Want to Search</label>
         <input 
-              type="text"
-              placeholder="Full Name"
-              onChange={handleChange}
-              name="name"
-              value={formData.name}
-          />
+          type="text"
+          placeholder="Full Name"
+          onChange={handleChange}
+          onKeyDown={handleKeyDown} // Attach handleKeyDown to the input
+          name="name"
+          value={formData.name}
+        />
         <label>Enter the City of the Person You Want to Search</label>
         <input 
-            type="text"
-            placeholder="City"
-            onChange={handleChange}
-            name="city"
-            value={formData.city}
+          type="text"
+          placeholder="City"
+          onChange={handleChange}
+          onKeyDown={handleKeyDown} // Attach handleKeyDown to the input
+          name="city"
+          value={formData.city}
         />
         <button
           className="button"
