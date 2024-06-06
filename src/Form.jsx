@@ -10,8 +10,7 @@ export default function Form() {
   async function handleClick() {
     try {
       const apiResponse = await makeAPICall(formData.name, formData.city);
-            setDataArray(apiResponse.results || []);
-            console.log(dataArray);
+      setDataArray(apiResponse || []);
     } catch (error) {
       console.error('Error fetching data:', error);
     }

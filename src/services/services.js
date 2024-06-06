@@ -1,4 +1,4 @@
-export default async function makeAPICall(name, city) {
+export default async function makeDonorsAPICall(name, city){
   if (!name || !city) {
     throw new Error('Name and city are required parameters.');
   }
@@ -6,7 +6,9 @@ export default async function makeAPICall(name, city) {
   const nameAPI = encodeURIComponent(name);
   const cityAPI = encodeURIComponent(city);
 
-  const url = `https://api.open.fec.gov/v1/schedules/schedule_a/?contributor_name=${nameAPI}&contributor_city=${cityAPI}&per_page=100&sort=-contribution_receipt_date&sort_hide_null=false&sort_null_only=false&api_key=sT5EcBtx3MYb9PURfSOW0bCiigbTk7ABmza4TiQT`;
+
+  const url = `http://localhost:8080/donors/name/${nameAPI}/city/${cityAPI}`;
+  console.log(url)
 
   try {
     const response = await fetch(url, {
@@ -18,6 +20,7 @@ export default async function makeAPICall(name, city) {
     }
 
     const apiResponse = await response.json();
+    console.log(apiResponse)
     return apiResponse;
   } catch (error) {
     console.error('API call failed:', error);
