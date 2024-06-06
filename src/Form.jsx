@@ -43,7 +43,7 @@ export default function Form() {
           type="text"
           placeholder="Full Name"
           onChange={handleChange}
-          onKeyDown={handleKeyDown} // Attach handleKeyDown to the input
+          onKeyDown={handleKeyDown} 
           name="name"
           value={formData.name}
         />
@@ -52,7 +52,7 @@ export default function Form() {
           type="text"
           placeholder="City"
           onChange={handleChange}
-          onKeyDown={handleKeyDown} // Attach handleKeyDown to the input
+          onKeyDown={handleKeyDown} 
           name="city"
           value={formData.city}
         />
