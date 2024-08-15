@@ -5,7 +5,7 @@ import ColumnHeader from "./components/Data/ColumnHeader";
 
 export default function Form() {
   const [dataArray, setDataArray] = React.useState([]);
-  const [formData, setFormData] = React.useState({name: "", city: ""});
+  const [formData, setFormData] = React.useState({name: "", city: "", state: ""});
 
   async function handleClick() {
     try {
@@ -41,11 +41,12 @@ export default function Form() {
         <label>Enter the Name of the Person You Want to Search</label>
         <input 
           type="text"
-          placeholder="Full Name"
+          placeholder="Full Name (required)"
           onChange={handleChange}
           onKeyDown={handleKeyDown} 
           name="name"
           value={formData.name}
+          required
         />
         <label>Enter the City of the Person You Want to Search</label>
         <input 
@@ -55,6 +56,15 @@ export default function Form() {
           onKeyDown={handleKeyDown} 
           name="city"
           value={formData.city}
+        />
+        <label>Enter the State of the Person You Want to Search</label>
+        <input 
+          type="text"
+          placeholder="State"
+          onChange={handleChange}
+          onKeyDown={handleKeyDown} 
+          name="State"
+          value={formData.state}
         />
         <button
           className="button"

@@ -4,11 +4,9 @@ export default async function makeDonorsAPICall(name, city){
   }
 
   const nameAPI = encodeURIComponent(name);
-  const cityAPI = encodeURIComponent(city);
-
+  const cityAPI = city ? encodeURIComponent(city): '';
 
   const url = `http://localhost:8080/donors/name/${nameAPI}/city/${cityAPI}`;
-  console.log(url)
 
   try {
     const response = await fetch(url, {
